@@ -1,0 +1,200 @@
+<mxfile host="app.diagrams.net" modified="2026-10-02T13:55:00.000Z" agent="Mozilla/5.0" version="21.0.0" type="device">
+  <diagram id="usecase-diagram" name="UML Use Case Diagram">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="850" background="#ffffff" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Title Banner -->
+        <mxCell id="title" value="&lt;b&gt;UML USE-CASE DIAGRAM — PROBLEM STATEMENT #47&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#495057&quot;&gt;Domain &amp;amp; SSL Certificate Expiry Alert System | PES University CSE&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;fontColor=#000000;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="40" y="20" width="1120" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- System Boundary -->
+        <mxCell id="boundary" value="&lt;b&gt;System Boundary: Domain &amp;amp; SSL Expiry Alert Utility&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=1.5;dashed=1;dashPattern=6 4;verticalAlign=top;align=left;spacingLeft=15;spacingTop=10;fontColor=#000000;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="250" y="90" width="670" height="710" as="geometry" />
+        </mxCell>
+
+        <!-- Primary Actor: SysAdmin -->
+        <mxCell id="actor_sysadmin" value="&lt;b&gt;SysAdmin&lt;/b&gt;&lt;br&gt;(Primary Actor)" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;fontColor=#000000;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="80" y="240" width="50" height="90" as="geometry" />
+        </mxCell>
+
+        <!-- Secondary Actor: Security Officer -->
+        <mxCell id="actor_security" value="&lt;b&gt;Security Officer&lt;/b&gt;&lt;br&gt;(Secondary Actor)" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;fontColor=#000000;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="80" y="520" width="50" height="90" as="geometry" />
+        </mxCell>
+
+        <!-- System Actor: Audit Scheduler -->
+        <mxCell id="actor_scheduler" value="&amp;laquo;System Actor&amp;raquo;&lt;br&gt;&lt;b&gt;Audit Scheduler&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#495057&quot; style=&quot;font-size:10px;&quot;&gt;(Daily Cron Daemon)&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;fontColor=#000000;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="980" y="160" width="160" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- External System: Endpoints & WHOIS -->
+        <mxCell id="actor_endpoints" value="&amp;laquo;External System&amp;raquo;&lt;br&gt;&lt;b&gt;Endpoints &amp;amp; WHOIS&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#495057&quot; style=&quot;font-size:10px;&quot;&gt;(TLS Endpoints / RDAP)&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;fontColor=#000000;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="980" y="340" width="160" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- External System: Notification Channels -->
+        <mxCell id="actor_notif" value="&amp;laquo;External System&amp;raquo;&lt;br&gt;&lt;b&gt;Notification Channels&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#495057&quot; style=&quot;font-size:10px;&quot;&gt;(Slack / PagerDuty / Mail)&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;fontColor=#000000;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="980" y="520" width="160" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- USE CASES (Left Column inside boundary) -->
+        <mxCell id="uc09" value="&lt;b&gt;UC-09: Authenticate &amp;amp;&lt;br&gt;Authorize (RBAC)&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;fontColor=#000000;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="290" y="140" width="180" height="55" as="geometry" />
+        </mxCell>
+
+        <mxCell id="uc01" value="&lt;b&gt;UC-01: Manage Domain &amp;amp;&lt;br&gt;Endpoint Inventory&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;fontColor=#000000;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="290" y="240" width="180" height="55" as="geometry" />
+        </mxCell>
+
+        <mxCell id="uc02" value="&lt;b&gt;UC-02: Configure Escalation&lt;br&gt;Policies &amp;amp; Thresholds&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;fontColor=#000000;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="290" y="340" width="180" height="55" as="geometry" />
+        </mxCell>
+
+        <mxCell id="uc07" value="&lt;b&gt;UC-07: Verify Escalation&lt;br&gt;Tier &amp;amp; Routing Rules&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;fontColor=#000000;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="310" y="440" width="180" height="55" as="geometry" />
+        </mxCell>
+
+        <mxCell id="uc08" value="&lt;b&gt;UC-08: View Dashboard &amp;amp;&lt;br&gt;Generate Reports&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;fontColor=#000000;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="290" y="560" width="180" height="55" as="geometry" />
+        </mxCell>
+
+        <mxCell id="uc10" value="&lt;b&gt;UC-10: Acknowledge &amp;amp;&lt;br&gt;Mute Active Alert&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;fontColor=#000000;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="310" y="680" width="180" height="55" as="geometry" />
+        </mxCell>
+
+        <!-- USE CASES (Right Column inside boundary) -->
+        <mxCell id="uc05" value="&lt;b&gt;UC-05: Trigger On-Demand&lt;br&gt;Audit&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;fontColor=#000000;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="670" y="140" width="190" height="55" as="geometry" />
+        </mxCell>
+
+        <mxCell id="uc03" value="&lt;b&gt;UC-03: Execute Automated&lt;br&gt;Daily Expiry Audit&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;fontColor=#000000;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="670" y="250" width="190" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="uc04" value="&lt;b&gt;UC-04: Dispatch Multi-Channel&lt;br&gt;Escalation Alerts&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;fontColor=#000000;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="670" y="420" width="190" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="uc06" value="&lt;b&gt;UC-06: Escalate to Security&lt;br&gt;Officer (Critical Tier 3)&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;fontColor=#000000;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="670" y="550" width="200" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- ASSOCIATIONS: SysAdmin to Use Cases -->
+        <mxCell id="edge_sa_uc01" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=none;" edge="1" parent="1" source="actor_sysadmin" target="uc01">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="edge_sa_uc02" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=none;" edge="1" parent="1" source="actor_sysadmin" target="uc02">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="edge_sa_uc05" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=none;" edge="1" parent="1" source="actor_sysadmin" target="uc05">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="200" y="270" />
+              <mxPoint x="200" y="110" />
+              <mxPoint x="765" y="110" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="edge_sa_uc08" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=none;" edge="1" parent="1" source="actor_sysadmin" target="uc08">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="edge_sa_uc10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=none;" edge="1" parent="1" source="actor_sysadmin" target="uc10">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="190" y="320" />
+              <mxPoint x="190" y="710" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- ASSOCIATIONS: Security Officer to Use Cases -->
+        <mxCell id="edge_so_uc08" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=none;" edge="1" parent="1" source="actor_security" target="uc08">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="edge_so_uc10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=none;" edge="1" parent="1" source="actor_security" target="uc10">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="180" y="580" />
+              <mxPoint x="180" y="700" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Scheduler to UC-03 -->
+        <mxCell id="edge_sched_uc03" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;" edge="1" parent="1" source="actor_scheduler" target="uc03">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- UC-03 to Endpoints & WHOIS -->
+        <mxCell id="edge_uc03_endpoints" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;dashed=1;endArrow=classic;" edge="1" parent="1" source="uc03" target="actor_endpoints">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- UC-04 and UC-06 to Notification Channels -->
+        <mxCell id="edge_uc04_notif" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;" edge="1" parent="1" source="uc04" target="actor_notif">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="930" y="450" />
+              <mxPoint x="930" y="540" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="edge_uc06_notif" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;" edge="1" parent="1" source="uc06" target="actor_notif">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="930" y="580" />
+              <mxPoint x="930" y="560" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- INCLUDES & EXTENDS RELATIONSHIPS -->
+
+        <!-- UC-05 extends UC-03 -->
+        <mxCell id="edge_extend_uc05_uc03" value="&amp;laquo;extend&amp;raquo;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;dashed=1;endArrow=open;fontColor=#000000;fontSize=10;fontStyle=1;" edge="1" parent="1" source="uc05" target="uc03">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- UC-06 extends UC-04 -->
+        <mxCell id="edge_extend_uc06_uc04" value="&amp;laquo;extend&amp;raquo;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;dashed=1;endArrow=open;fontColor=#000000;fontSize=10;fontStyle=1;" edge="1" parent="1" source="uc06" target="uc04">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- UC-04 includes UC-07 -->
+        <mxCell id="edge_include_uc04_uc07" value="&amp;laquo;include&amp;raquo;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;dashed=1;endArrow=open;fontColor=#000000;fontSize=10;fontStyle=1;" edge="1" parent="1" source="uc04" target="uc07">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- UC-01 includes UC-09 -->
+        <mxCell id="edge_include_uc01_uc09" value="&amp;laquo;include&amp;raquo;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;dashed=1;endArrow=open;fontColor=#000000;fontSize=10;fontStyle=1;" edge="1" parent="1" source="uc01" target="uc09">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- UC-02 includes UC-09 -->
+        <mxCell id="edge_include_uc02_uc09" value="&amp;laquo;include&amp;raquo;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;dashed=1;endArrow=open;fontColor=#000000;fontSize=10;fontStyle=1;" edge="1" parent="1" source="uc02" target="uc09">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="270" y="360" />
+              <mxPoint x="270" y="170" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- UC-03 trigger connection to UC-04 -->
+        <mxCell id="edge_uc03_uc04" value="triggers on expiry" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;dashed=1;endArrow=classic;fontColor=#000000;fontSize=10;fontStyle=1;" edge="1" parent="1" source="uc03" target="uc04">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

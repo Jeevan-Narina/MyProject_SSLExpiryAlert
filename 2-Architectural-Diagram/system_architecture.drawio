@@ -1,0 +1,244 @@
+<mxfile host="app.diagrams.net" modified="2026-10-02T13:56:00.000Z" agent="Mozilla/5.0" version="21.0.0" type="device">
+  <diagram id="system-architecture-diagram" name="System Architecture">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1300" pageHeight="950" background="#ffffff" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Title Banner -->
+        <mxCell id="arch_title" value="&lt;b&gt;SYSTEM ARCHITECTURE &amp;amp; SUBSYSTEM DESIGN&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#495057&quot;&gt;Problem Statement #47: Domain &amp;amp; SSL Certificate Expiry Alert System | PES University CSE&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;fontColor=#000000;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="40" y="20" width="1220" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- TIER 1: Presentation & Client Tier -->
+        <mxCell id="tier1_box" value="&lt;b&gt;1. Presentation &amp;amp; Client Tier&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;align=center;spacingTop=10;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;fontColor=#000000;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="40" y="90" width="240" height="340" as="geometry" />
+        </mxCell>
+
+        <mxCell id="c_web_ui" value="&lt;b&gt;Web Dashboard SPA&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#495057&quot; style=&quot;font-size:10px;&quot;&gt;React / Vite / Tailwind UI&lt;br&gt;Real-time Expiry Matrix &amp;amp; Metrics&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.2;fontColor=#000000;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="60" y="130" width="200" height="65" as="geometry" />
+        </mxCell>
+
+        <mxCell id="c_cli" value="&lt;b&gt;SysAdmin CLI Tool&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#495057&quot; style=&quot;font-size:10px;&quot;&gt;Python Click / Automation SDK&lt;br&gt;Bulk Ingestion &amp;amp; Direct Probes&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.2;fontColor=#000000;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="60" y="215" width="200" height="65" as="geometry" />
+        </mxCell>
+
+        <mxCell id="c_actors" value="&lt;b&gt;Authorized Stakeholders&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#333333&quot; style=&quot;font-size:10px;&quot;&gt;• SysAdmin (Daily Operations)&lt;br&gt;• Security Officer (Compliance / T3)&lt;br&gt;&lt;/font&gt;&lt;font color=&quot;#000000&quot; style=&quot;font-size:9px;&quot;&gt;RBAC via OAuth2 / JWT&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;fontColor=#000000;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="60" y="300" width="200" height="110" as="geometry" />
+        </mxCell>
+
+        <!-- TIER 2: API Gateway & Auth Tier -->
+        <mxCell id="tier2_box" value="&lt;b&gt;2. API Gateway &amp;amp; Auth Tier&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;align=center;spacingTop=10;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;fontColor=#000000;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="310" y="90" width="260" height="340" as="geometry" />
+        </mxCell>
+
+        <mxCell id="c_gateway" value="&lt;b&gt;API Gateway &amp;amp; Reverse Proxy&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#495057&quot; style=&quot;font-size:10px;&quot;&gt;FastAPI / NGINX Ingress&lt;br&gt;TLS 1.3 &amp;amp; Token-Bucket Rate Limiter&lt;br&gt;Payload Validation / OpenAPI Docs&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.2;fontColor=#000000;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="330" y="130" width="220" height="75" as="geometry" />
+        </mxCell>
+
+        <mxCell id="c_rbac" value="&lt;b&gt;RBAC &amp;amp; Identity Guard&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#495057&quot; style=&quot;font-size:10px;&quot;&gt;JWT &amp;amp; OAuth2 Authenticator&lt;br&gt;Permission Scopes &amp;amp; Role Verification&lt;br&gt;&lt;/font&gt;&lt;font color=&quot;#000000&quot; style=&quot;font-size:9px;&quot;&gt;NFR-002 Security Enforcement&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.2;fontColor=#000000;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="330" y="225" width="220" height="80" as="geometry" />
+        </mxCell>
+
+        <mxCell id="c_ingestion" value="&lt;b&gt;Asset Ingestion Controller&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#495057&quot; style=&quot;font-size:10px;&quot;&gt;CSV / JSON Bulk Parser&lt;br&gt;Domain Syntax &amp;amp; FQDN Normalizer&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;fontColor=#000000;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="330" y="325" width="220" height="85" as="geometry" />
+        </mxCell>
+
+        <!-- TIER 3: Core Orchestration Engine -->
+        <mxCell id="tier3_box" value="&lt;b&gt;3. Core Orchestration Engine&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;align=center;spacingTop=10;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;fontColor=#000000;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="600" y="90" width="280" height="340" as="geometry" />
+        </mxCell>
+
+        <mxCell id="c_scheduler" value="&lt;b&gt;Audit Scheduler Daemon&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#495057&quot; style=&quot;font-size:10px;&quot;&gt;Cron-based Master (02:00 UTC)&lt;br&gt;&lt;/font&gt;&lt;font color=&quot;#000000&quot; style=&quot;font-size:9px;&quot;&gt;Active-Standby High Availability&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.2;fontColor=#000000;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="620" y="130" width="240" height="65" as="geometry" />
+        </mxCell>
+
+        <mxCell id="c_dispatcher" value="&lt;b&gt;Job Partitioning &amp;amp; Dispatcher&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#495057&quot; style=&quot;font-size:10px;&quot;&gt;Batches 1,000+ Assets into Worker Chunks&lt;br&gt;Non-blocking Enqueue into Redis&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.2;fontColor=#000000;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="620" y="215" width="240" height="70" as="geometry" />
+        </mxCell>
+
+        <mxCell id="c_escalation_engine" value="&lt;b&gt;Escalation Policy State Machine&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#333333&quot; style=&quot;font-size:9px;&quot;&gt;Tier 1: ≤ 30 Days (SysAdmin Warning)&lt;br&gt;Tier 2: ≤ 14 Days (Lead Escalation)&lt;br&gt;&lt;b&gt;Tier 3: ≤ 3 Days (Security Officer P1)&lt;/b&gt;&lt;br&gt;&lt;/font&gt;&lt;font color=&quot;#495057&quot; style=&quot;font-size:9px;&quot;&gt;Evaluates Unacknowledged Incident Age (&gt;48h)&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;fontColor=#000000;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="620" y="305" width="240" height="105" as="geometry" />
+        </mxCell>
+
+        <!-- TIER 4: Task Broker & Queue -->
+        <mxCell id="tier4_box" value="&lt;b&gt;4. Task Broker &amp;amp; Queue Tier&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;align=center;spacingTop=10;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;fontColor=#000000;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="910" y="90" width="270" height="340" as="geometry" />
+        </mxCell>
+
+        <mxCell id="c_redis_broker" value="&lt;b&gt;Redis In-Memory Broker&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#495057&quot; style=&quot;font-size:10px;&quot;&gt;Celery / RQ Asynchronous Queue&lt;br&gt;Sub-millisecond Enqueue Latency&lt;br&gt;&lt;/font&gt;&lt;font color=&quot;#000000&quot; style=&quot;font-size:9px;&quot;&gt;NFR-001 High Throughput&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.2;fontColor=#000000;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="930" y="130" width="230" height="75" as="geometry" />
+        </mxCell>
+
+        <mxCell id="c_dlq" value="&lt;b&gt;Dead Letter Queue (DLQ)&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#495057&quot; style=&quot;font-size:10px;&quot;&gt;Failed Audits &amp;amp; Rate-Limits&lt;br&gt;Jittered Exponential Backoff Retries&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.2;fontColor=#000000;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="930" y="225" width="230" height="70" as="geometry" />
+        </mxCell>
+
+        <mxCell id="c_redlock" value="&lt;b&gt;Distributed State &amp;amp; Locks&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#495057&quot; style=&quot;font-size:10px;&quot;&gt;Redis Redlock Concurrency Guard&lt;br&gt;Prevents Duplicate Concurrent Scans&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;fontColor=#000000;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="930" y="315" width="230" height="75" as="geometry" />
+        </mxCell>
+
+        <!-- TIER 5: Asynchronous Worker Engine (Pool) -->
+        <mxCell id="tier5_box" value="&lt;b&gt;5. Asynchronous Worker Engine (Pool)&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;align=center;spacingTop=10;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;fontColor=#000000;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="40" y="460" width="410" height="210" as="geometry" />
+        </mxCell>
+
+        <mxCell id="c_tls_worker" value="&lt;b&gt;TLS Handshake Worker&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#495057&quot; style=&quot;font-size:10px;&quot;&gt;Non-blocking SNI Sockets&lt;br&gt;X.509 Expiry &amp;amp; Chain Validator&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.2;fontColor=#000000;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="60" y="500" width="180" height="70" as="geometry" />
+        </mxCell>
+
+        <mxCell id="c_whois_worker" value="&lt;b&gt;WHOIS / RDAP Worker&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#495057&quot; style=&quot;font-size:10px;&quot;&gt;ICANN Registry Queries&lt;br&gt;Domain Registrar Expiry&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.2;fontColor=#000000;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="255" y="500" width="180" height="70" as="geometry" />
+        </mxCell>
+
+        <mxCell id="c_dns_worker" value="&lt;b&gt;DNS Health &amp;amp; Pre-flight Resolver&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#495057&quot; style=&quot;font-size:10px;&quot;&gt;Validates A / AAAA / CNAME records &amp;amp; detects hijacking prior to handshake&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;fontColor=#000000;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="60" y="585" width="375" height="65" as="geometry" />
+        </mxCell>
+
+        <!-- TIER 6: Persistence, State & Secrets -->
+        <mxCell id="tier6_box" value="&lt;b&gt;6. Persistence, State &amp;amp; Secrets Tier&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;align=center;spacingTop=10;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;fontColor=#000000;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="475" y="460" width="330" height="210" as="geometry" />
+        </mxCell>
+
+        <mxCell id="c_postgres" value="&lt;b&gt;PostgreSQL Relational DB&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#495057&quot; style=&quot;font-size:10px;&quot;&gt;Domain Inventory, Audit Logs &amp;amp; Incident Records&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;fontColor=#000000;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="495" y="500" width="290" height="45" as="geometry" />
+        </mxCell>
+
+        <mxCell id="c_vault" value="&lt;b&gt;Encrypted Secrets Vault (AES-256-GCM)&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#495057&quot; style=&quot;font-size:10px;&quot;&gt;NFR-002: Encrypted Slack Tokens &amp;amp; SMTP Secrets&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;fontColor=#000000;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="495" y="555" width="290" height="45" as="geometry" />
+        </mxCell>
+
+        <mxCell id="c_audit_ledger" value="&lt;b&gt;Compliance Audit Trail Ledger&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#495057&quot; style=&quot;font-size:10px;&quot;&gt;Tamper-evident logs for SOC 2 / ISO 27001&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;fontColor=#000000;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="495" y="610" width="290" height="45" as="geometry" />
+        </mxCell>
+
+        <!-- TIER 7: Escalation Notification Subsystem -->
+        <mxCell id="tier7_box" value="&lt;b&gt;7. Escalation Notification Subsystem&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;align=center;spacingTop=10;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;fontColor=#000000;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="830" y="460" width="430" height="210" as="geometry" />
+        </mxCell>
+
+        <mxCell id="c_t1_notif" value="&lt;b&gt;Tier 1: Warning&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#333333&quot; style=&quot;font-size:9px;&quot;&gt;≤ 30 Days Left&lt;br&gt;&lt;/font&gt;&lt;font color=&quot;#495057&quot; style=&quot;font-size:9px;&quot;&gt;SMTP Email&lt;br&gt;Slack #ops&lt;br&gt;&lt;/font&gt;&lt;font color=&quot;#000000&quot; style=&quot;font-size:9px;&quot;&gt;&lt;b&gt;SysAdmin&lt;/b&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.2;fontColor=#000000;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="845" y="500" width="125" height="90" as="geometry" />
+        </mxCell>
+
+        <mxCell id="c_t2_notif" value="&lt;b&gt;Tier 2: Urgent&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#333333&quot; style=&quot;font-size:9px;&quot;&gt;≤ 14 Days Left&lt;br&gt;&lt;/font&gt;&lt;font color=&quot;#495057&quot; style=&quot;font-size:9px;&quot;&gt;Teams Webhook&lt;br&gt;Slack @lead&lt;br&gt;&lt;/font&gt;&lt;font color=&quot;#000000&quot; style=&quot;font-size:9px;&quot;&gt;&lt;b&gt;Lead Admin&lt;/b&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.2;fontColor=#000000;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="980" y="500" width="125" height="90" as="geometry" />
+        </mxCell>
+
+        <mxCell id="c_t3_notif" value="&lt;b&gt;Tier 3: Critical&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#333333&quot; style=&quot;font-size:9px;&quot;&gt;≤ 3 Days Left&lt;br&gt;&lt;/font&gt;&lt;font color=&quot;#495057&quot; style=&quot;font-size:9px;&quot;&gt;PagerDuty P1&lt;br&gt;SMS / Call&lt;br&gt;&lt;/font&gt;&lt;font color=&quot;#000000&quot; style=&quot;font-size:9px;&quot;&gt;&lt;b&gt;Security Officer&lt;/b&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;fontColor=#000000;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1115" y="500" width="130" height="90" as="geometry" />
+        </mxCell>
+
+        <mxCell id="c_ack_suppress" value="&lt;b&gt;Acknowledgment &amp;amp; Suppress Engine&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#495057&quot; style=&quot;font-size:9px;&quot;&gt;Auto-escalates unacknowledged alerts after 48h to prevent operational blind spots&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;fontColor=#000000;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="845" y="605" width="400" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- TIER 8: External Target Infrastructure -->
+        <mxCell id="tier8_box" value="&lt;b&gt;8. External Public Infrastructure &amp;amp; Third-Party Services&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;align=center;spacingTop=10;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;dashed=1;dashPattern=6 4;fontColor=#000000;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="40" y="700" width="1220" height="180" as="geometry" />
+        </mxCell>
+
+        <mxCell id="ext_endpoints" value="&lt;b&gt;Monitored Web &amp;amp; API Endpoints&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#333333&quot; style=&quot;font-size:10px;&quot;&gt;Target Servers across AWS, GCP, Azure, On-Premises&lt;br&gt;&lt;/font&gt;&lt;font color=&quot;#495057&quot; style=&quot;font-size:9px;&quot;&gt;TCP Port 443 / Custom TLS Endpoints&lt;br&gt;SNI Handshakes &amp;amp; Certificate Chains&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;fontColor=#000000;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="60" y="740" width="370" height="110" as="geometry" />
+        </mxCell>
+
+        <mxCell id="ext_registries" value="&lt;b&gt;ICANN Accredited Registrars &amp;amp; RDAP&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#333333&quot; style=&quot;font-size:10px;&quot;&gt;VeriSign, GoDaddy, Cloudflare, Namecheap&lt;br&gt;&lt;/font&gt;&lt;font color=&quot;#495057&quot; style=&quot;font-size:9px;&quot;&gt;Port 43 WHOIS Protocols &amp;amp; JSON RDAP Endpoints&lt;br&gt;Domain Registration Lifecycle &amp;amp; Expiry&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;fontColor=#000000;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="465" y="740" width="370" height="110" as="geometry" />
+        </mxCell>
+
+        <mxCell id="ext_channels" value="&lt;b&gt;Third-Party Notification Services&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#333333&quot; style=&quot;font-size:10px;&quot;&gt;Slack Incoming Webhooks, PagerDuty Events API v2&lt;br&gt;&lt;/font&gt;&lt;font color=&quot;#495057&quot; style=&quot;font-size:9px;&quot;&gt;SendGrid SMTP, Twilio SMS &amp;amp; Voice Call Gateways&lt;br&gt;HTTP 200/202 Delivery Confirmations&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;fontColor=#000000;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="870" y="740" width="370" height="110" as="geometry" />
+        </mxCell>
+
+        <!-- CONNECTING EDGES -->
+        <mxCell id="edge_ui_gw" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;" edge="1" parent="1" source="c_web_ui" target="c_gateway">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="edge_cli_gw" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;" edge="1" parent="1" source="c_cli" target="c_gateway">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="290" y="247" />
+              <mxPoint x="290" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="edge_gw_dispatcher" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;" edge="1" parent="1" source="c_gateway" target="c_dispatcher">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="580" y="167" />
+              <mxPoint x="580" y="250" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="edge_sched_dispatcher" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;" edge="1" parent="1" source="c_scheduler" target="c_dispatcher">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="edge_dispatcher_broker" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;" edge="1" parent="1" source="c_dispatcher" target="c_redis_broker">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="880" y="250" />
+              <mxPoint x="880" y="167" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="edge_broker_workers" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;" edge="1" parent="1" source="c_redis_broker" target="c_tls_worker">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1190" y="167" />
+              <mxPoint x="1190" y="445" />
+              <mxPoint x="150" y="445" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="edge_tls_ext" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;" edge="1" parent="1" source="c_tls_worker" target="ext_endpoints">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="150" y="680" />
+              <mxPoint x="200" y="680" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="edge_whois_ext" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;" edge="1" parent="1" source="c_whois_worker" target="ext_registries">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="345" y="680" />
+              <mxPoint x="600" y="680" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="edge_workers_db" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;" edge="1" parent="1" source="c_tls_worker" target="c_postgres">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="200" y="480" />
+              <mxPoint x="495" y="480" />
+              <mxPoint x="495" y="522" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="edge_esc_notif" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;" edge="1" parent="1" source="c_escalation_engine" target="tier7_box">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="800" y="357" />
+              <mxPoint x="800" y="490" />
+              <mxPoint x="830" y="490" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="edge_notif_channels" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;" edge="1" parent="1" source="c_t3_notif" target="ext_channels">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
