@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" modified="2026-11-17T00:00:00.000Z" agent="ChatGPT" version="24.7.17" type="device">
+  <diagram id="ssl-component-corrected" name="UML Component Diagram">
+    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="900" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="title" value="&lt;b&gt;UML COMPONENT DIAGRAM&lt;/b&gt;&lt;br&gt;Domain &amp;amp; SSL Certificate Expiry Alert System — Problem Statement #47" style="text;html=1;align=center;verticalAlign=middle;fontSize=20;fontColor=#142B4A;" vertex="1" parent="1">
+          <mxGeometry x="45" y="22" width="1310" height="58" as="geometry"/>
+        </mxCell>
+        <mxCell id="subtitle" value="Asynchronous event-driven architecture with independently executing audit workers" style="text;html=1;align=center;verticalAlign=middle;fontSize=11;fontColor=#52657A;" vertex="1" parent="1">
+          <mxGeometry x="45" y="82" width="1310" height="28" as="geometry"/>
+        </mxCell>
+        <mxCell id="ui" value="&lt;i&gt;«component»&lt;/i&gt;&lt;br&gt;&lt;b&gt;Dashboard &amp; Admin CLI&lt;/b&gt;&lt;br&gt;React/Vite UI • Admin CLI" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#35516F;strokeWidth=2;fontSize=13;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="55" y="155" width="220" height="112" as="geometry"/>
+        </mxCell>
+        <mxCell id="api" value="&lt;i&gt;«component»&lt;/i&gt;&lt;br&gt;&lt;b&gt;API Gateway &amp; Authentication&lt;/b&gt;&lt;br&gt;FastAPI • JWT • RBAC" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#35516F;strokeWidth=2;fontSize=13;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="365" y="155" width="220" height="112" as="geometry"/>
+        </mxCell>
+        <mxCell id="orch" value="&lt;i&gt;«component»&lt;/i&gt;&lt;br&gt;&lt;b&gt;Scheduler &amp; Orchestrator&lt;/b&gt;&lt;br&gt;Cron • expiry policy • dispatch" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#35516F;strokeWidth=2;fontSize=13;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="675" y="155" width="250" height="112" as="geometry"/>
+        </mxCell>
+        <mxCell id="queue" value="&lt;i&gt;«component»&lt;/i&gt;&lt;br&gt;&lt;b&gt;Redis Task Broker&lt;/b&gt;&lt;br&gt;Celery asynchronous job queue" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#35516F;strokeWidth=2;fontSize=13;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="1015" y="155" width="250" height="112" as="geometry"/>
+        </mxCell>
+        <mxCell id="notify" value="&lt;i&gt;«component»&lt;/i&gt;&lt;br&gt;&lt;b&gt;Notification &amp; Escalation&lt;/b&gt;&lt;br&gt;Email • Slack • PagerDuty" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#35516F;strokeWidth=2;fontSize=13;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="675" y="425" width="250" height="112" as="geometry"/>
+        </mxCell>
+        <mxCell id="providers" value="&lt;i&gt;«component»&lt;/i&gt;&lt;br&gt;&lt;b&gt;Notification Providers&lt;/b&gt;&lt;br&gt;SMTP • Slack API • PagerDuty API" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#35516F;strokeWidth=2;fontSize=13;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="1015" y="425" width="250" height="112" as="geometry"/>
+        </mxCell>
+        <mxCell id="store" value="&lt;i&gt;«component»&lt;/i&gt;&lt;br&gt;&lt;b&gt;Persistence &amp; Secrets&lt;/b&gt;&lt;br&gt;PostgreSQL • encrypted secrets" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#35516F;strokeWidth=2;fontSize=13;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="365" y="690" width="220" height="112" as="geometry"/>
+        </mxCell>
+        <mxCell id="workers" value="&lt;i&gt;«component»&lt;/i&gt;&lt;br&gt;&lt;b&gt;Audit Worker Pool&lt;/b&gt;&lt;br&gt;TLS • WHOIS/RDAP • DNS checks" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#35516F;strokeWidth=2;fontSize=13;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="675" y="690" width="250" height="112" as="geometry"/>
+        </mxCell>
+        <mxCell id="external" value="&lt;i&gt;«component»&lt;/i&gt;&lt;br&gt;&lt;b&gt;External Domain Services&lt;/b&gt;&lt;br&gt;Target domains • CA • DNS • RDAP" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#35516F;strokeWidth=2;fontSize=13;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="1015" y="690" width="250" height="112" as="geometry"/>
+        </mxCell>
+        <mxCell id="socket1" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#FFFFFF;strokeColor=#C56A13;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="307" y="203" width="16" height="16" as="geometry"/>
+        </mxCell>
+        <mxCell id="socketmask1" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#FFFFFF;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="315" y="202" width="10" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="ball1" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#FFFFFF;strokeColor=#1565C0;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="337" y="203" width="16" height="16" as="geometry"/>
+        </mxCell>
+        <mxCell id="reqstem1" value="" style="edgeStyle=none;html=1;strokeColor=#334E68;strokeWidth=1.5;endArrow=none;startArrow=none;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="275" y="211" as="sourcePoint"/>
+            <mxPoint x="307" y="211" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="provstem1" value="" style="edgeStyle=none;html=1;strokeColor=#334E68;strokeWidth=1.5;endArrow=none;startArrow=none;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="365" y="211" as="sourcePoint"/>
+            <mxPoint x="353" y="211" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="assembly1" value="IAdminAPI" style="edgeStyle=none;html=1;strokeColor=#1565C0;strokeWidth=2;endArrow=none;startArrow=none;fontSize=9;fontStyle=1;labelBackgroundColor=#FFFFFF;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="319" y="211" as="sourcePoint"/>
+            <mxPoint x="337" y="211" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="socket2" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#FFFFFF;strokeColor=#C56A13;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="617" y="203" width="16" height="16" as="geometry"/>
+        </mxCell>
+        <mxCell id="socketmask2" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#FFFFFF;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="625" y="202" width="10" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="ball2" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#FFFFFF;strokeColor=#1565C0;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="647" y="203" width="16" height="16" as="geometry"/>
+        </mxCell>
+        <mxCell id="reqstem2" value="" style="edgeStyle=none;html=1;strokeColor=#334E68;strokeWidth=1.5;endArrow=none;startArrow=none;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="585" y="211" as="sourcePoint"/>
+            <mxPoint x="617" y="211" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="provstem2" value="" style="edgeStyle=none;html=1;strokeColor=#334E68;strokeWidth=1.5;endArrow=none;startArrow=none;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="675" y="211" as="sourcePoint"/>
+            <mxPoint x="663" y="211" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="assembly2" value="IControlAPI" style="edgeStyle=none;html=1;strokeColor=#1565C0;strokeWidth=2;endArrow=none;startArrow=none;fontSize=9;fontStyle=1;labelBackgroundColor=#FFFFFF;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="629" y="211" as="sourcePoint"/>
+            <mxPoint x="647" y="211" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="socket3" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#FFFFFF;strokeColor=#C56A13;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="957" y="203" width="16" height="16" as="geometry"/>
+        </mxCell>
+        <mxCell id="socketmask3" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#FFFFFF;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="965" y="202" width="10" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="ball3" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#FFFFFF;strokeColor=#1565C0;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="987" y="203" width="16" height="16" as="geometry"/>
+        </mxCell>
+        <mxCell id="reqstem3" value="" style="edgeStyle=none;html=1;strokeColor=#334E68;strokeWidth=1.5;endArrow=none;startArrow=none;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="925" y="211" as="sourcePoint"/>
+            <mxPoint x="957" y="211" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="provstem3" value="" style="edgeStyle=none;html=1;strokeColor=#334E68;strokeWidth=1.5;endArrow=none;startArrow=none;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1015" y="211" as="sourcePoint"/>
+            <mxPoint x="1003" y="211" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="assembly3" value="IAuditJobQueue" style="edgeStyle=none;html=1;strokeColor=#1565C0;strokeWidth=2;endArrow=none;startArrow=none;fontSize=9;fontStyle=1;labelBackgroundColor=#FFFFFF;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="969" y="211" as="sourcePoint"/>
+            <mxPoint x="987" y="211" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="socket4" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#FFFFFF;strokeColor=#C56A13;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="792" y="302" width="16" height="16" as="geometry"/>
+        </mxCell>
+        <mxCell id="socketmask4" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#FFFFFF;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="800" y="301" width="10" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="ball4" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#FFFFFF;strokeColor=#1565C0;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="792" y="377" width="16" height="16" as="geometry"/>
+        </mxCell>
+        <mxCell id="reqstem4" value="" style="edgeStyle=none;html=1;strokeColor=#334E68;strokeWidth=1.5;endArrow=none;startArrow=none;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="800" y="267" as="sourcePoint"/>
+            <mxPoint x="808" y="310" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="provstem4" value="" style="edgeStyle=none;html=1;strokeColor=#334E68;strokeWidth=1.5;endArrow=none;startArrow=none;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="800" y="425" as="sourcePoint"/>
+            <mxPoint x="792" y="385" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="assembly4" value="IAlertDispatch" style="edgeStyle=none;html=1;strokeColor=#1565C0;strokeWidth=2;endArrow=none;startArrow=none;fontSize=9;fontStyle=1;labelBackgroundColor=#FFFFFF;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="796" y="310" as="sourcePoint"/>
+            <mxPoint x="808" y="385" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="socket5" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#FFFFFF;strokeColor=#C56A13;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="957" y="473" width="16" height="16" as="geometry"/>
+        </mxCell>
+        <mxCell id="socketmask5" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#FFFFFF;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="965" y="472" width="10" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="ball5" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#FFFFFF;strokeColor=#1565C0;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="987" y="473" width="16" height="16" as="geometry"/>
+        </mxCell>
+        <mxCell id="reqstem5" value="" style="edgeStyle=none;html=1;strokeColor=#334E68;strokeWidth=1.5;endArrow=none;startArrow=none;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="925" y="481" as="sourcePoint"/>
+            <mxPoint x="957" y="481" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="provstem5" value="" style="edgeStyle=none;html=1;strokeColor=#334E68;strokeWidth=1.5;endArrow=none;startArrow=none;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1015" y="481" as="sourcePoint"/>
+            <mxPoint x="1003" y="481" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="assembly5" value="IProviderDelivery" style="edgeStyle=none;html=1;strokeColor=#1565C0;strokeWidth=2;endArrow=none;startArrow=none;fontSize=9;fontStyle=1;labelBackgroundColor=#FFFFFF;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="969" y="481" as="sourcePoint"/>
+            <mxPoint x="987" y="481" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="socket6" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#FFFFFF;strokeColor=#C56A13;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="647" y="738" width="16" height="16" as="geometry"/>
+        </mxCell>
+        <mxCell id="socketmask6" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#FFFFFF;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="655" y="737" width="10" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="ball6" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#FFFFFF;strokeColor=#1565C0;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="617" y="738" width="16" height="16" as="geometry"/>
+        </mxCell>
+        <mxCell id="reqstem6" value="" style="edgeStyle=none;html=1;strokeColor=#334E68;strokeWidth=1.5;endArrow=none;startArrow=none;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="675" y="746" as="sourcePoint"/>
+            <mxPoint x="663" y="746" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="provstem6" value="" style="edgeStyle=none;html=1;strokeColor=#334E68;strokeWidth=1.5;endArrow=none;startArrow=none;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="585" y="746" as="sourcePoint"/>
+            <mxPoint x="617" y="746" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="assembly6" value="IAuditPersistence" style="edgeStyle=none;html=1;strokeColor=#1565C0;strokeWidth=2;endArrow=none;startArrow=none;fontSize=9;fontStyle=1;labelBackgroundColor=#FFFFFF;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="651" y="746" as="sourcePoint"/>
+            <mxPoint x="633" y="746" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="socket7" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#FFFFFF;strokeColor=#C56A13;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="957" y="738" width="16" height="16" as="geometry"/>
+        </mxCell>
+        <mxCell id="socketmask7" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#FFFFFF;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="965" y="737" width="10" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="ball7" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#FFFFFF;strokeColor=#1565C0;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="987" y="738" width="16" height="16" as="geometry"/>
+        </mxCell>
+        <mxCell id="reqstem7" value="" style="edgeStyle=none;html=1;strokeColor=#334E68;strokeWidth=1.5;endArrow=none;startArrow=none;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="925" y="746" as="sourcePoint"/>
+            <mxPoint x="957" y="746" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="provstem7" value="" style="edgeStyle=none;html=1;strokeColor=#334E68;strokeWidth=1.5;endArrow=none;startArrow=none;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1015" y="746" as="sourcePoint"/>
+            <mxPoint x="1003" y="746" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="assembly7" value="IExternalProbe" style="edgeStyle=none;html=1;strokeColor=#1565C0;strokeWidth=2;endArrow=none;startArrow=none;fontSize=9;fontStyle=1;labelBackgroundColor=#FFFFFF;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="969" y="746" as="sourcePoint"/>
+            <mxPoint x="987" y="746" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="legend" value="&lt;b&gt;UML NOTATION&lt;/b&gt;&lt;br&gt;&lt;font color='#1565C0'&gt;○&lt;/font&gt; Provided interface (lollipop): service offered&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;font color='#C56A13'&gt;◖&lt;/font&gt; Required interface (socket): service needed&lt;br&gt;&lt;b&gt;Assembly connector:&lt;/b&gt; joins a required socket to a compatible provided interface." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F1F5F9;strokeColor=#CBD5E1;fontSize=11;align=left;verticalAlign=middle;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="55" y="835" width="1275" height="48" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
